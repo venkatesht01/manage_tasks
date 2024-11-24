@@ -13,9 +13,12 @@ ng serve
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 
-#Technologies Used
+## Technologies Used
 
 Angular v19.0.1
+
 TypeScript
+
 CSS
+
 Angular Material
