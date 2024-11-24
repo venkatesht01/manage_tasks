@@ -1,0 +1,26 @@
+.task-list-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-list-container {
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+.task-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-data-message {
+  text-align: center;
+  color: #ffffff;
+  font-style: italic;
+  font-size: 16px;
+  padding: 10px;
+}

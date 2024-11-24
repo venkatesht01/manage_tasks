@@ -1,0 +1,46 @@
+<div class="task-form-container" style="max-width: 400px; margin: auto">
+  <form [formGroup]="taskForm" class="form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Task Name</mat-label>
+      <input matInput formControlName="taskName" />
+      @if(isTaskNameValid){
+      <mat-error
+        >Task Name is required, with atlease 3 characters long</mat-error
+      >
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        formControlName="description"
+        placeholder="Enter task description"
+        rows="4"
+      ></textarea>
+      @if (isDescriptionValid){
+      <mat-error>Description is required.</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status" name="status">
+        @for (status of statusList; track status){
+        <mat-option value="{{ status.value }}">{{ status.name }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <div class="button-group">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="taskForm.invalid"
+      >
+        {{ isCreateMode ? "Create" : "Update" }}
+      </button>
+      <button mat-raised-button color="warn" type="button" [routerLink]="['/']">
+        Back
+      </button>
+    </div>
+  </form>
+</div>

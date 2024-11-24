@@ -1,0 +1,21 @@
+.task-form-container {
+    padding-top: 50px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+  }
+  
+  
